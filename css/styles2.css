@@ -326,56 +326,15 @@ background:rgba(255,255,255,0.04);
 border-radius:10px;
 border:1px solid rgba(255,255,255,0.08);
 backdrop-filter:blur(6px);
-
 padding:30px 25px;
-
 position:relative;
-height:110px;
-overflow:visible;
-cursor:pointer;
-
-transition:all 0.35s ease, height 0.4s ease;
-
--webkit-tap-highlight-color: transparent;
+height:auto;
+transition:border-color 0.3s ease;
 z-index:1;
 }
 
-/* HOVER DESKTOP */
-
-@media(min-width:769px){
-
 .card:hover{
-height:260px;
 border-color:#d4af37;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-transform:translateY(-8px) scale(1.02);
-z-index:10;
-}
-
-.card:hover h3{
-transform:translateY(-5px);
-}
-
-.card:hover .card-content{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* MOBILE CLICK */
-
-.card.active{
-height:260px;
-border-color:#d4af37;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-background:rgba(255,255,255,0.06);
-z-index:10;
-}
-
-.card.active .card-content{
-opacity:1;
-transform:translateY(0);
 }
 
 /* TITULO */
@@ -384,23 +343,13 @@ transform:translateY(0);
 color:#d4af37;
 text-align:center;
 font-size:18px;
-margin:0;
-transition:0.3s;
+margin:0 0 20px 0;
 }
 
 /* CONTENIDO */
 
 .card-content{
-position:absolute;
-top:55px;
-left:0;
-width:100%;
-
-opacity:0;
-transform:translateY(10px);
-transition:all 0.3s ease;
-
-padding:0 25px 20px 25px;
+padding:0;
 }
 
 /* TEXTO */
@@ -533,46 +482,7 @@ height:48px;
   margin:auto;
 }
 
-/* 🔥 CARDS ESTÁTICAS */
 
-.card{
-  height:auto !important;              /* 👈 elimina expansión */
-  cursor:default;
-}
-
-/* CONTENIDO SIEMPRE VISIBLE */
-.card-content{
-  position:relative;
-  top:auto;
-  opacity:1;
-  transform:none;
-}
-
-/* EFECTO HOVER SIMPLE (solo borde) */
-.card:hover{
-  transform:none !important;
-  box-shadow:none !important;
-  border-color:#d4af37;
-}
-
-/* DESACTIVAR ANIMACIONES ANTERIORES */
-.card.active{
-  height:auto;
-  box-shadow:none;
-  background:rgba(255,255,255,0.04);
-}
-
-/* SACAR EFECTOS EN HOVER DESKTOP */
-@media(min-width:769px){
-  .card:hover{
-    height:auto;
-  }
-
-  .card:hover .card-content{
-    opacity:1;
-    transform:none;
-  }
-}
 /* 🔥 SERVICIOS 3 ARRIBA / 2 ABAJO CENTRADOS */
 
 .servicios .grid{
