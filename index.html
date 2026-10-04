@@ -156,11 +156,15 @@
 <div class="card form-card">
 <h3><i data-lucide="mail"></i> Contacto</h3>
 <div class="card-content form-visible">
-<form>
-<input type="text" placeholder="Nombre" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Escribe tu consulta"></textarea>
-<button class="enviar">Enviar Consulta</button>
+<form action="https://formsubmit.co/contacto.bemsa@gmail.com" method="POST">
+<!-- Evita el captcha (opcional) -->
+<input type="hidden" name="_captcha" value="false">
+<!-- Redirección cuando envíen el form (puedes crear una página de gracias luego) -->
+<input type="hidden" name="_next" value="https://www.bemsa.cl/">
+<input type="text" name="Nombre" placeholder="Nombre" required>
+<input type="email" name="Email" placeholder="Email" required>
+<textarea name="Consulta" placeholder="Escribe tu consulta" required></textarea>
+<button class="enviar" type="submit">Enviar Consulta</button>
 </form>
 </div>
 </div>

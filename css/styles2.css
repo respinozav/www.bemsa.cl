@@ -286,7 +286,7 @@ padding:100px 10%;
 text-align:center;
 background:#0c1a36;
 
-height:650px;
+min-height:650px;
 display:flex;
 flex-direction:column;
 overflow:visible;
@@ -576,18 +576,16 @@ height:48px;
 /* 🔥 SERVICIOS 3 ARRIBA / 2 ABAJO CENTRADOS */
 
 .servicios .grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
   gap:30px;
 }
 
-/* CENTRAR LAS 2 DE ABAJO */
-.servicios .grid .card:nth-child(4){
-  grid-column:1 / 2;
-}
-
-.servicios .grid .card:nth-child(5){
-  grid-column:3 / 4;
+.servicios .grid .card{
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  max-width: 400px; /* Para que no se estiren demasiado */
 }
 
 /* RESPONSIVE (IMPORTANTE) */
